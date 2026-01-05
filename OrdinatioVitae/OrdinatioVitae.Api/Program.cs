@@ -10,7 +10,10 @@ using OrdinatioVitae.Api.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.ReturnHttpNotAcceptable = true;
+}).AddXmlSerializerFormatters();
 
 builder.Services.AddOpenApi();
 
