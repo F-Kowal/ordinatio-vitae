@@ -443,3 +443,7 @@ dotnet_style_operator_placement_when_wrapping = beginning_of_line
 tab_width = 4
 indent_size = 4
 end_of_line = crlf
+
+# Ignore file-scoped namespace rule for EF Core migrations
+[**/Migrations/**/*.cs]
+dotnet_diagnostic.IDE0161.severity = none
